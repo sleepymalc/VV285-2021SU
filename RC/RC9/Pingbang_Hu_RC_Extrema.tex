@@ -149,7 +149,7 @@
     \begin{equation}\label{2.5.2}
         D(\nabla f)|_x=\begin{pmatrix}
             \frac{\partial^2 f}{\partial x_1\partial x_1}\Big|_x & \frac{\partial^2 f}{\partial x_2\partial x_1}\Big|_x & \cdots & \frac{\partial^2 f}{\partial x_n\partial x_1}\Big|_x \\
-            \vdots                                               & \vdots                                               &        & \vdots                                               \\
+            \vdots                                               & \vdots                                               & \ddots & \vdots                                               \\
             \frac{\partial^2 f}{\partial x_1\partial x_n}\Big|_x & \frac{\partial^2 f}{\partial x_2\partial x_n}\Big|_x & \cdots & \frac{\partial^2 f}{\partial x_n\partial x_n}\Big|_x
         \end{pmatrix}\in\text{Mat}(n\times n;\R).
     \end{equation}
@@ -424,7 +424,7 @@
     Let $\Omega\subset\R^n$ be open and $f\in C^1(\Omega,\R),g\in C^1(\Omega,\R^m),m<n$. Assume that $f$ has a local extremum on the set $E=\{x\in\R^n:g(x)=0\}$ at $\xi\in E$. Assume further that in
     \[Dg|_\xi=\begin{pmatrix}
             \frac{\partial g_1}{\partial x_1} & \cdots & \frac{\partial g_1}{\partial x_n} \\
-            \vdots                            &        & \vdots                            \\
+            \vdots                            & \ddots & \vdots                            \\
             \frac{\partial g_m}{\partial x_1} & \cdots & \frac{\partial g_m}{\partial x_n}
         \end{pmatrix}\]
     \textbf{there exists a submatrix consisting of $m$ columns whose determinant does
