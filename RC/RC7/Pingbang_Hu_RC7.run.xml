@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>Hu_Pingbang_RC_Curve.bcf</file>
+      <file>Pingbang_Hu_RC7.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>Hu_Pingbang_RC_Curve.bbl</file>
+      <file>Pingbang_Hu_RC7.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -65,19 +65,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>Hu_Pingbang_RC_Curve</infile>
+      <infile>Pingbang_Hu_RC7</infile>
     </cmdline>
     <input>
-      <file>Hu_Pingbang_RC_Curve.bcf</file>
+      <file>Pingbang_Hu_RC7.bcf</file>
     </input>
     <output>
-      <file>Hu_Pingbang_RC_Curve.bbl</file>
+      <file>Pingbang_Hu_RC7.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>Hu_Pingbang_RC_Curve.bbl</file>
+      <file>Pingbang_Hu_RC7.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>Hu_Pingbang_RC_Curve.bcf</file>
+      <file>Pingbang_Hu_RC7.bcf</file>
     </requires>
   </external>
 </requests>
