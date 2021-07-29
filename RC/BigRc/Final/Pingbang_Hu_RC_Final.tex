@@ -59,7 +59,7 @@
 }
 
 \title{VV285 RC Final}
-\subtitle{\textbf{Final Exercise}\\\large Last but not least\dots}
+\subtitle{\textbf{Final Exam Exercises}\\\large Last but not least\dots}
 \institute[UM-SJTU JI]{University of Michigan-Shanghai Jiao Tong University Joint Institute}
 \author{Pingbang Hu}
 
@@ -613,13 +613,192 @@
 %----------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{frame}
     \frametitle{Exercise 4}
-
+    \par Let $\Omega\subset \R^n$ be an open set and $R\subset \Omega$ an admissible region. Let $u:\Omega\rightarrow\R$ be a twice continuously differentiable 
+    function such that 
+    \begin{equation*}
+        \frac{\partial^2 u}{\partial x^2_1} + \cdots + \frac{\partial^2 u}{\partial x^2_n} = \lambda u\text{ on int}R\qquad \text{and}\qquad \at{u}{\partial R}{} = 0
+    \end{equation*}
+    for some $\lambda\in\R$. Suppose that $u\neq 0$, i.e., $u(x)\neq 0$ for some $x\in R$. Prove that $\lambda<0$.
 \end{frame}
 
-
-%----------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{frame}
-    \frametitle{Exercise 5}
+    \frametitle{Solution 4}
+    \par Let $\Omega\subset \R^n$ be an open set and $R\subset \Omega$ an admissible region. Let $u:\Omega\rightarrow\R$ be a twice continuously differentiable 
+    function such that 
+    \begin{equation*}
+        \frac{\partial^2 u}{\partial x^2_1} + \cdots + \frac{\partial^2 u}{\partial x^2_n} = \lambda u\text{ on int}R\qquad \text{and}\qquad \at{u}{\partial R}{} = 0
+    \end{equation*}
+    for some $\lambda\in\R$. Suppose that $u\neq 0$, i.e., $u(x)\neq 0$ for some $x\in R$. Prove that $\lambda<0$.
+
+    \nullspacesmall
+
+    \par We multiply both side of the equation with $u$
+    \begin{equation*}
+        u\Delta u = \lambda u^2
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par Let $\Omega\subset \R^n$ be an open set and $R\subset \Omega$ an admissible region. Let $u:\Omega\rightarrow\R$ be a twice continuously differentiable 
+    function such that 
+    \begin{equation*}
+        \frac{\partial^2 u}{\partial x^2_1} + \cdots + \frac{\partial^2 u}{\partial x^2_n} = \lambda u\text{ on int}R\qquad \text{and}\qquad \at{u}{\partial R}{} = 0
+    \end{equation*}
+    for some $\lambda\in\R$. Suppose that $u\neq 0$, i.e., $u(x)\neq 0$ for some $x\in R$. Prove that $\lambda<0$.
+
+    \nullspacesmall
+
+    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
+    \begin{equation*}
+        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par Let $\Omega\subset \R^n$ be an open set and $R\subset \Omega$ an admissible region. Let $u:\Omega\rightarrow\R$ be a twice continuously differentiable 
+    function such that 
+    \begin{equation*}
+        \frac{\partial^2 u}{\partial x^2_1} + \cdots + \frac{\partial^2 u}{\partial x^2_n} = \lambda u\text{ on int}R\qquad \text{and}\qquad \at{u}{\partial R}{} = 0
+    \end{equation*}
+    for some $\lambda\in\R$. Suppose that $u\neq 0$, i.e., $u(x)\neq 0$ for some $x\in R$. Prove that $\lambda<0$.
+
+    \nullspacesmall
+
+    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
+    \begin{equation*}
+        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
+    \end{equation*}
+    \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
+    \begin{equation*}
+        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
+    \end{equation*}
+        
+    \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide, yielding
+    \begin{equation*}
+        \lambda = \frac{\int_\Omega u\Delta u\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
+    \begin{equation*}
+        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
+    \end{equation*}
+        
+    \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide, yielding
+    \begin{equation*}
+        \lambda = \frac{\int_\Omega u\Delta u\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+
+    \par Applying Green's first identity
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
+    \begin{equation*}
+        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
+    \end{equation*}
+        
+    \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide, yielding
+    \begin{equation*}
+        \lambda = \frac{\int_\Omega u\Delta u\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+
+    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
+    \begin{equation*}
+        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
+    \begin{equation*}
+        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
+    \end{equation*}
+        
+    \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide, yielding
+    \begin{equation*}
+        \lambda = \frac{\int_\Omega u\Delta u\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+
+    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
+    \begin{equation*}
+        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+
+    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$.
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
+    \begin{equation*}
+        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+
+    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
+    \begin{equation*}
+        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+
+    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
+    \begin{equation*}
+        \int_\Omega(\nabla u)^2\,dx = 0
+    \end{equation*}
+    which implies $\nabla u(x) = 0$ for all $x$, i.e., u is constant.
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
+    \begin{equation*}
+        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+
+    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
+    \begin{equation*}
+        \int_\Omega(\nabla u)^2\,dx = 0
+    \end{equation*}
+    which implies $\nabla u(x) = 0$ for all $x$, i.e., u is constant. Since $\at{u}{\partial \Omega}{} = 0$
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
+    \begin{equation*}
+        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+
+    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
+    \begin{equation*}
+        \int_\Omega(\nabla u)^2\,dx = 0
+    \end{equation*}
+    which implies $\nabla u(x) = 0$ for all $x$, i.e., u is constant. Since $\at{u}{\partial \Omega}{} = 0$, this would mean $u(x) = 0$ for all $x$, which we
+    have excluded.
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 4}
+    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
+    \begin{equation*}
+        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
+    \end{equation*}
+
+    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
+    \begin{equation*}
+        \int_\Omega(\nabla u)^2\,dx = 0
+    \end{equation*}
+    which implies $\nabla u(x) = 0$ for all $x$, i.e., u is constant. Since $\at{u}{\partial \Omega}{} = 0$, this would mean $u(x) = 0$ for all $x$, which we
+    have excluded. Therefore, $\lambda = 0$ is impossible and we conclude that
+    \begin{equation*}
+        \lambda < 0.
+    \end{equation*}
+    
+    \myqed
 
 \end{frame}
 \end{document}
