@@ -72,6 +72,7 @@
     \end{center}
 \end{frame}
 
+%---------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{frame}
     \frametitle{Exercise 1}
     \par Calculate the directional derivative of the continuous function
@@ -167,7 +168,7 @@
 
 \end{frame}
 
-
+%---------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{frame}
     \frametitle{Exercise 2}
     \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let 
@@ -329,16 +330,294 @@
 
 \end{frame}
 
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{frame}
     \frametitle{Exercise 3}
-
+    \par Let $\left\lVert x\right\rVert = \sqrt{x_1^2+x_2^2+x_3^2}$ for $x = (x_1, x_2, x_3) \in \R^3$. Find the flux of the vector field
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow\R^3, \qquad F(x) = \frac{x}{\left\lVert x\right\rVert^3 }
+    \end{equation*}
+    through the surface 
+    \begin{equation*}
+        \mathcal{S} = \{x\in \R^3: 4x_1^2 + 9x_2^2 + 6x_3^2 = 36\}
+    \end{equation*}
+    by using a suitable parametrization.
 \end{frame}
 
+\begin{frame}
+    \frametitle{Solution 3}
+    \par Let $\left\lVert x\right\rVert = \sqrt{x_1^2+x_2^2+x_3^2}$ for $x = (x_1, x_2, x_3) \in \R^3$. Find the flux of the vector field
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow\R^3, \qquad F(x) = \frac{x}{\left\lVert x\right\rVert^3 }
+    \end{equation*}
+    through the surface 
+    \begin{equation*}
+        \mathcal{S} = \{x\in \R^3: 4x_1^2 + 9x_2^2 + 6x_3^2 = 36\}
+    \end{equation*}
+    by using a suitable parametrization. 
+
+    \nullspacesmall
+    
+    \par We note that 
+    \begin{equation*}
+        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par We note that 
+    \begin{equation*}
+        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+    \end{equation*}
+    so 
+    \begin{equation*}
+        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
+    \end{equation*}
+    for \dots
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par We note that 
+    \begin{equation*}
+        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+    \end{equation*}
+    so 
+    \begin{equation*}
+        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
+    \end{equation*}
+    for $x\neq 0$.
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par We note that 
+    \begin{equation*}
+        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+    \end{equation*}
+    so 
+    \begin{equation*}
+        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
+    \end{equation*}
+    for $x\neq 0$. Hence, it is sufficient to calculate the flux through the boundary of an 
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par We note that 
+    \begin{equation*}
+        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+    \end{equation*}
+    so 
+    \begin{equation*}
+        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
+    \end{equation*}
+    for $x\neq 0$. Hence, it is sufficient to calculate the flux through the boundary of an \textbf{arbitrary ball} $B_\epsilon(0)$ of radius $\epsilon>0$
+    centered at the origin. We can parametrize $\partial B_\epsilon(0)$ by 
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par We note that 
+    \begin{equation*}
+        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+    \end{equation*}
+    so 
+    \begin{equation*}
+        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
+    \end{equation*}
+    for $x\neq 0$. Hence, it is sufficient to calculate the flux through the boundary of an \textbf{arbitrary ball} $B_\epsilon(0)$ of radius $\epsilon>0$
+    centered at the origin. We can parametrize $\partial B_\epsilon(0)$ by 
+    \begin{equation*}
+        \varphi(\phi, \theta) = \begin{pmatrix}
+            \epsilon \cos \phi \sin \theta\\
+            \epsilon \sin\phi \sin\theta\\
+            \epsilon\cos\theta
+        \end{pmatrix}, \qquad
+        t_\theta\times t_\phi = \begin{pmatrix}
+            \epsilon^2\cos\phi\sin^2\theta\\
+            \epsilon^2\sin\phi\sin^2\theta\\
+            \epsilon^2\cos\theta\sin\theta
+        \end{pmatrix}
+    \end{equation*}
+    where $0<\phi<2\pi$ and $0<\theta<\pi$. 
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par We note that 
+    \begin{equation*}
+        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+    \end{equation*}
+    so 
+    \begin{equation*}
+        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
+    \end{equation*}
+    for $x\neq 0$. Hence, it is sufficient to calculate the flux through the boundary of an \textbf{arbitrary ball} $B_\epsilon(0)$ of radius $\epsilon>0$
+    centered at the origin. We can parametrize $\partial B_\epsilon(0)$ by 
+    \begin{equation*}
+        \varphi(\phi, \theta) = \begin{pmatrix}
+            \epsilon \cos \phi \sin \theta\\
+            \epsilon \sin\phi \sin\theta\\
+            \epsilon\cos\theta
+        \end{pmatrix}, \qquad
+        t_\theta\times t_\phi = \begin{pmatrix}
+            \epsilon^2\cos\phi\sin^2\theta\\
+            \epsilon^2\sin\phi\sin^2\theta\\
+            \epsilon^2\cos\theta\sin\theta
+        \end{pmatrix}
+    \end{equation*}
+    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector.
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par  We can parametrize $\partial B_\epsilon(0)$ by 
+    \begin{equation*}
+        \varphi(\phi, \theta) = \begin{pmatrix}
+            \epsilon \cos \phi \sin \theta\\
+            \epsilon \sin\phi \sin\theta\\
+            \epsilon\cos\theta
+        \end{pmatrix}, \qquad
+        t_\theta\times t_\phi = \begin{pmatrix}
+            \epsilon^2\cos\phi\sin^2\theta\\
+            \epsilon^2\sin\phi\sin^2\theta\\
+            \epsilon^2\cos\theta\sin\theta
+        \end{pmatrix}
+    \end{equation*}
+    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector. Then the flux through $\mathcal{S}$ is 
+    \begin{equation*}
+        \begin{split}
+            \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
+            &= \int^{2\pi}_0\int^\pi_0\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+        \end{split}
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par  We can parametrize $\partial B_\epsilon(0)$ by 
+    \begin{equation*}
+        \varphi(\phi, \theta) = \begin{pmatrix}
+            \epsilon \cos \phi \sin \theta\\
+            \epsilon \sin\phi \sin\theta\\
+            \epsilon\cos\theta
+        \end{pmatrix}, \qquad
+        t_\theta\times t_\phi = \begin{pmatrix}
+            \epsilon^2\cos\phi\sin^2\theta\\
+            \epsilon^2\sin\phi\sin^2\theta\\
+            \epsilon^2\cos\theta\sin\theta
+        \end{pmatrix}
+    \end{equation*}
+    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector. Then the flux through $\mathcal{S}$ is 
+    \begin{equation*}
+        \begin{split}
+            \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
+            &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+        \end{split}
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par  We can parametrize $\partial B_\epsilon(0)$ by 
+    \begin{equation*}
+        \varphi(\phi, \theta) = \begin{pmatrix}
+            \epsilon \cos \phi \sin \theta\\
+            \epsilon \sin\phi \sin\theta\\
+            \epsilon\cos\theta
+        \end{pmatrix}, \qquad
+        t_\theta\times t_\phi = \begin{pmatrix}
+            \epsilon^2\cos\phi\sin^2\theta\\
+            \epsilon^2\sin\phi\sin^2\theta\\
+            \epsilon^2\cos\theta\sin\theta
+        \end{pmatrix}
+    \end{equation*}
+    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector. Then the flux through $\mathcal{S}$ is 
+    \begin{equation*}
+        \begin{split}
+            \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
+            &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+            &= \int^{2\pi}_0\int^\pi_0 \frac{\epsilon^3}{\epsilon^3}\left\langle \begin{pmatrix}
+                 \cos \phi \sin \theta\\
+                 \sin\phi \sin\theta\\
+                \cos\theta
+            \end{pmatrix}, \begin{pmatrix}
+                \cos\phi\sin^2\theta\\
+                \sin\phi\sin^2\theta\\
+                \cos\theta\sin\theta
+            \end{pmatrix}\right\rangle \,d\theta\,d\phi\\
+        \end{split}
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par  We can parametrize $\partial B_\epsilon(0)$ by 
+    \begin{equation*}
+        \varphi(\phi, \theta) = \begin{pmatrix}
+            \epsilon \cos \phi \sin \theta\\
+            \epsilon \sin\phi \sin\theta\\
+            \epsilon\cos\theta
+        \end{pmatrix}, \qquad
+        t_\theta\times t_\phi = \begin{pmatrix}
+            \epsilon^2\cos\phi\sin^2\theta\\
+            \epsilon^2\sin\phi\sin^2\theta\\
+            \epsilon^2\cos\theta\sin\theta
+        \end{pmatrix}
+    \end{equation*}
+    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector. Then the flux through $\mathcal{S}$ is 
+    \begin{equation*}
+        \begin{split}
+            \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
+            &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+            &= \int^{2\pi}_0\int^\pi_0 \frac{\epsilon^3}{\epsilon^3}\left\langle \begin{pmatrix}
+                 \cos \phi \sin \theta\\
+                 \sin\phi \sin\theta\\
+                \cos\theta
+            \end{pmatrix}, \begin{pmatrix}
+                \cos\phi\sin^2\theta\\
+                \sin\phi\sin^2\theta\\
+                \cos\theta\sin\theta
+            \end{pmatrix}\right\rangle \,d\theta\,d\phi\\
+            &= \int^{2\pi}_0\int^\pi_0\sin\theta\,d\theta\,d\phi\\
+        \end{split}
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 3}
+    \par  We can parametrize $\partial B_\epsilon(0)$ by 
+    \begin{equation*}
+        \varphi(\phi, \theta) = \begin{pmatrix}
+            \epsilon \cos \phi \sin \theta\\
+            \epsilon \sin\phi \sin\theta\\
+            \epsilon\cos\theta
+        \end{pmatrix}, \qquad
+        t_\theta\times t_\phi = \begin{pmatrix}
+            \epsilon^2\cos\phi\sin^2\theta\\
+            \epsilon^2\sin\phi\sin^2\theta\\
+            \epsilon^2\cos\theta\sin\theta
+        \end{pmatrix}
+    \end{equation*}
+    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector. Then the flux through $\mathcal{S}$ is 
+    \begin{equation*}
+        \begin{split}
+            \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
+            &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+            &= \int^{2\pi}_0\int^\pi_0 \frac{\epsilon^3}{\epsilon^3}\left\langle \begin{pmatrix}
+                 \cos \phi \sin \theta\\
+                 \sin\phi \sin\theta\\
+                \cos\theta
+            \end{pmatrix}, \begin{pmatrix}
+                \cos\phi\sin^2\theta\\
+                \sin\phi\sin^2\theta\\
+                \cos\theta\sin\theta
+            \end{pmatrix}\right\rangle \,d\theta\,d\phi\\
+            &= \int^{2\pi}_0\int^\pi_0\sin\theta\,d\theta\,d\phi = 4\pi
+        \end{split}
+    \end{equation*}
+    \myqed
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{frame}
     \frametitle{Exercise 4}
 
 \end{frame}
 
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{frame}
     \frametitle{Exercise 5}
 
