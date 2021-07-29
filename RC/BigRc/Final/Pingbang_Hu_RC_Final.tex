@@ -1,0 +1,346 @@
+\documentclass[10pt, t, allowdisplaybreaks]{beamer}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{float} 
+\usepackage{multido}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{indentfirst} 
+\usepackage[style=mla]{biblatex}
+\usepackage{setspace}
+\usepackage{calligra}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{textpos}
+
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+\definecolor{Turquoise3}{RGB}{0, 134, 139}
+\renewcommand{\emph}[1]{{\color{Turquoise3}\textsl{#1}}}
+\newcommand{\C}{\mathbb{C}} \newcommand{\F}{\mathbb{F}} \newcommand{\R}{\mathbb{R}} \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\myseries}[2]{$#1_1,#1_2,\dots,#1_#2$}
+\newcommand{\nullspace}{~\\[15pt]}
+\newcommand{\rot}{\text{\Large{\calligra{rot}}\,}}
+\newcommand{\Remark}{\textbf{Remark: }}
+\newcommand{\Question}{\textbf{Question: }}
+\newcommand{\Extension}{\textbf{Extension: }}
+\newcommand{\scp}[2]{\langle\,#1\,,\,#2\,\rangle} \newcommand{\scpp}{\langle\,\cdot\,,\,\cdot\,\rangle}
+\newcommand{\myqed}{\hfill$\blacksquare$}
+\newcommand{\nullspacesmall}{~\vspace{1em}}
+\newcommand{\nullspacemid}{~\vspace{4em}}
+\newcommand{\nullspacebig}{~\vspace{6em}}
+\newcommand{\at}[3]{\left.#1\right\vert_{#2}^{#3}}
+
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+
+\addtobeamertemplate{frametitle}{}{
+\begin{textblock*}{100mm}(0.85\textwidth,-1cm)
+\includegraphics[height=1cm]{Figures/logo/logo.png}
+\end{textblock*}}
+
+\definecolor{themecolor}{RGB}{25,25,112} 
+
+\usecolortheme[named=themecolor]{structure}
+
+\setbeamertemplate{items}[default]
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=themecolor,
+    filecolor=themecolor,      
+    urlcolor=themecolor,
+    citecolor=themecolor,
+}
+
+\title{VV285 RC Final}
+\subtitle{\textbf{Final Exercise}\\\large Last but not least\dots}
+\institute[UM-SJTU JI]{University of Michigan-Shanghai Jiao Tong University Joint Institute}
+\author{Pingbang Hu}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \begin{center}
+        \includegraphics[height=2cm]{Figures/logo/logo2.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise 1}
+    \par Calculate the directional derivative of the continuous function
+    \begin{equation*}
+        f:\R^2\rightarrow R, \qquad f(x,y) = \sqrt[3]{x^2y}
+    \end{equation*}
+    at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Solution 1}
+    \par Calculate the directional derivative of the continuous function
+    \begin{equation*}
+        f:\R^2\rightarrow R, \qquad f(x,y) = \sqrt[3]{x^2y}
+    \end{equation*}
+    at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
+
+    \nullspacesmall
+
+    \par From the definition, we need to calculate \dots
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 1}
+    \par Calculate the directional derivative of the continuous function
+    \begin{equation*}
+        f:\R^2\rightarrow R, \qquad f(x,y) = \sqrt[3]{x^2y}
+    \end{equation*}
+    at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
+
+    \nullspacesmall
+
+    \par From the definition, we need to calculate
+    \begin{equation*}
+        \frac{d}{dt} \at{f(x_0 + th)}{t = 0}{}
+    \end{equation*}
+    where $x_0 = 0$ and $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Solution 1}
+    \par Calculate the directional derivative of the continuous function
+    \begin{equation*}
+        f:\R^2\rightarrow R, \qquad f(x,y) = \sqrt[3]{x^2y}
+    \end{equation*}
+    at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
+
+    \nullspacesmall
+
+    \par From the definition, we need to calculate
+    \begin{equation*}
+        \frac{d}{dt} \at{f(x_0 + th)}{t = 0}{}
+    \end{equation*}
+    where $x_0 = 0$ and $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$. Hence, we have 
+    \begin{equation*}
+        f(x_0 + th) = f(t\cdot \begin{pmatrix}
+            1/\sqrt{2}\\
+            1\sqrt{2}
+        \end{pmatrix}) = \sqrt[3]{\frac{t^2}{2}\cdot \frac{t}{\sqrt{2}}} = \frac{t}{\sqrt{2}}
+    \end{equation*}
+    so that 
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 1}
+    \par Calculate the directional derivative of the continuous function
+    \begin{equation*}
+        f:\R^2\rightarrow R, \qquad f(x,y) = \sqrt[3]{x^2y}
+    \end{equation*}
+    at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
+
+    \nullspacesmall
+
+    \par From the definition, we need to calculate
+    \begin{equation*}
+        \frac{d}{dt} \at{f(x_0 + th)}{t = 0}{}
+    \end{equation*}
+    where $x_0 = 0$ and $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$. Hence, we have 
+    \begin{equation*}
+        f(x_0 + th) = f(t\cdot \begin{pmatrix}
+            1/\sqrt{2}\\
+            1\sqrt{2}
+        \end{pmatrix}) = \sqrt[3]{\frac{t^2}{2}\cdot \frac{t}{\sqrt{2}}} = \frac{t}{\sqrt{2}}
+    \end{equation*}
+    so that 
+    \begin{equation*}
+        \frac{d}{dt}f(x_0 + th) = \frac{d}{dt}\frac{t}{\sqrt{2}} = \frac{1}{\sqrt{2}}.
+    \end{equation*}
+    
+    \myqed
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Exercise 2}
+    \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let 
+    $\left\lVert x\right\rVert = \sqrt{x^2_1+x^2_2+x^2_3}$ for $x = (x_1, x_2, x_3)\in \R^3$.
+    \par Prove that the vector field 
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow \R^3, \qquad F(x) = g(\left\lVert x\right\rVert )x
+    \end{equation*}
+    is conservative.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 2}
+    \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let 
+    $\left\lVert x\right\rVert = \sqrt{x^2_1+x^2_2+x^2_3}$ for $x = (x_1, x_2, x_3)\in \R^3$.
+    \par Prove that the vector field 
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow \R^3, \qquad F(x) = g(\left\lVert x\right\rVert )x
+    \end{equation*}
+    is conservative.
+    
+    \nullspacesmall
+
+    \par The set $\R^3\backslash\{0\}$ is simply connected
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 2}
+    \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let 
+    $\left\lVert x\right\rVert = \sqrt{x^2_1+x^2_2+x^2_3}$ for $x = (x_1, x_2, x_3)\in \R^3$.
+    \par Prove that the vector field 
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow \R^3, \qquad F(x) = g(\left\lVert x\right\rVert )x
+    \end{equation*}
+    is conservative.
+    
+    \nullspacesmall
+
+    \par The set $\R^3\backslash\{0\}$ is simply connected, so it suffices to show that $\text{rot} F = 0$. 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 2}
+    \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let 
+    $\left\lVert x\right\rVert = \sqrt{x^2_1+x^2_2+x^2_3}$ for $x = (x_1, x_2, x_3)\in \R^3$.
+    \par Prove that the vector field 
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow \R^3, \qquad F(x) = g(\left\lVert x\right\rVert )x
+    \end{equation*}
+    is conservative.
+    
+    \nullspacesmall
+
+    \par The set $\R^3\backslash\{0\}$ is simply connected, so it suffices to show that $\text{rot} F = 0$. Now 
+    \begin{equation*}
+        \left\lvert (\text{rot}F)_i\right\rvert = \left\lvert \frac{\partial F_j}{\partial x_k} - \frac{\partial F_k}{\partial x_j}\right\rvert 
+    \end{equation*}
+    where $(i,j,k)$ is any one of the permutation of $\{1,2,3\}$. 
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Solution 2}
+    \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let 
+    $\left\lVert x\right\rVert = \sqrt{x^2_1+x^2_2+x^2_3}$ for $x = (x_1, x_2, x_3)\in \R^3$.
+    \par Prove that the vector field 
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow \R^3, \qquad F(x) = g(\left\lVert x\right\rVert )x
+    \end{equation*}
+    is conservative.
+    
+    \nullspacesmall
+
+    \par The set $\R^3\backslash\{0\}$ is simply connected, so it suffices to show that $\text{rot} F = 0$. Now 
+    \begin{equation*}
+        \left\lvert (\text{rot}F)_i\right\rvert = \left\lvert \frac{\partial F_j}{\partial x_k} - \frac{\partial F_k}{\partial x_j}\right\rvert 
+    \end{equation*}
+    where $(i,j,k)$ is any one of the permutation of $\{1,2,3\}$. 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 2}
+    We then have 
+    \begin{equation*}
+        \begin{split}
+            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
+            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
+        \end{split}
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 2}
+    We then have 
+    \begin{equation*}
+        \begin{split}
+            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
+            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
+            &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
+        \end{split}
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 2}
+    We then have 
+    \begin{equation*}
+        \begin{split}
+            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
+            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
+            &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
+            &= x_j g'(\left\lVert x\right\rVert )\frac{x_k}{\sqrt{x_1^2+x_2^2+x_3^2}} \\\\
+        \end{split}
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 2}
+    We then have 
+    \begin{equation*}
+        \begin{split}
+            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
+            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
+            &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
+            &= x_j g'(\left\lVert x\right\rVert )\frac{x_k}{\sqrt{x_1^2+x_2^2+x_3^2}} \\\\
+            &= x_j x_k \frac{g'(\left\lVert x\right\rVert )}{\left\lVert x\right\rVert }\\\\
+        \end{split}
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 2}
+    We then have 
+    \begin{equation*}
+        \begin{split}
+            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
+            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
+            &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
+            &= x_j g'(\left\lVert x\right\rVert )\frac{x_k}{\sqrt{x_1^2+x_2^2+x_3^2}} \\\\
+            &= x_j x_k \frac{g'(\left\lVert x\right\rVert )}{\left\lVert x\right\rVert } = \frac{\partial F_k}{\partial x_j}
+        \end{split}
+    \end{equation*}
+\end{frame}
+\begin{frame}
+    \frametitle{Solution 2}
+    We then have 
+    \begin{equation*}
+        \begin{split}
+            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
+            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
+            &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
+            &= x_j g'(\left\lVert x\right\rVert )\frac{x_k}{\sqrt{x_1^2+x_2^2+x_3^2}} \\\\
+            &= x_j x_k \frac{g'(\left\lVert x\right\rVert )}{\left\lVert x\right\rVert } = \frac{\partial F_k}{\partial x_j}
+        \end{split}
+    \end{equation*}
+
+    \nullspacesmall
+
+    \par Hence, the rotation of $F$ vanishes everywhere on $\R^3\backslash\{0\}$.
+
+    \myqed
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise 3}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise 4}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise 5}
+
+\end{frame}
+\end{document}
