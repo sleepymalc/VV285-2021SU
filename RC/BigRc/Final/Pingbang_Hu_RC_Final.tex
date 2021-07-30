@@ -221,6 +221,7 @@
         }          
     \end{equation*}
 \end{frame}
+
 \begin{frame}
     \frametitle{Solution 3}
     \par We note that 
@@ -288,33 +289,13 @@
             \visible<3->{
                 \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
             }
-            \visible<4->{
+            \only<4-4>{
                 &= \int^{2\pi}_0\int^\pi_0\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
-            }                        
-        \end{split}
-    \end{equation*}
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 3}
-    \par  We can parametrize $\partial B_\epsilon(0)$ by 
-    \begin{equation*}
-        \varphi(\phi, \theta) = \begin{pmatrix}
-            \epsilon \cos \phi \sin \theta\\
-            \epsilon \sin\phi \sin\theta\\
-            \epsilon\cos\theta
-        \end{pmatrix}, \qquad
-        t_\theta\times t_\phi = \begin{pmatrix}
-            \epsilon^2\cos\phi\sin^2\theta\\
-            \epsilon^2\sin\phi\sin^2\theta\\
-            \epsilon^2\cos\theta\sin\theta
-        \end{pmatrix}
-    \end{equation*}
-    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector. Then the flux through $\mathcal{S}$ is 
-    \begin{equation*}
-        \begin{split}
-            \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
-            &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
-            \visible<2->{
+            }           
+            \visible<5->{
+                &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+            }
+            \visible<6->{
                 &= \int^{2\pi}_0\int^\pi_0 \frac{\epsilon^3}{\epsilon^3}\left\langle \begin{pmatrix}
                     \cos \phi \sin \theta\\
                     \sin\phi \sin\theta\\
@@ -325,17 +306,14 @@
                    \cos\theta\sin\theta
                \end{pmatrix}\right\rangle \,d\theta\,d\phi\\
             }
-            \visible<3->{
+            \visible<7->{
                 &= \int^{2\pi}_0\int^\pi_0\sin\theta\,d\theta\,d\phi
             }
-            \visible<4->{
+            \visible<8->{
                 = 4\pi
             }
         \end{split}
     \end{equation*}
-    \visible<4->{
-        \myqed
-    }
 \end{frame}
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -396,7 +374,8 @@
         \begin{equation*}
             \int_\Omega(\nabla u)^2\,dx = 0
         \end{equation*}
-        which implies $\nabla u(x) = 0$ for all $x$, i.e.}\visible<7->{, u is constant.}\visible<8->{ Since $\at{u}{\partial \Omega}{} = 0$}\visible<9->{, this would mean $u(x) = 0$ for all $x$, which we have excluded.}\visible<10->{ Therefore, $\lambda = 0$ is impossible and we conclude that
+        which implies $\nabla u(x) = 0$ for all $x$, i.e.}\visible<7->{, u is constant.}\visible<8->{ Since 
+        $\at{u}{\partial \Omega}{} = 0$}\visible<9->{, this would mean $u(x) = 0$ for all $x$, which we have excluded.}\visible<10->{ Therefore, $\lambda = 0$ is impossible and we conclude that
         \begin{equation*}
             \lambda < 0.
         \end{equation*}
