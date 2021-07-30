@@ -82,7 +82,6 @@
     at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
 \end{frame}
 
-
 \begin{frame}
     \frametitle{Solution 1}
     \par Calculate the directional derivative of the continuous function
@@ -93,78 +92,26 @@
 
     \nullspacesmall
 
-    \par From the definition, we need to calculate \dots
-\end{frame}
-
-\begin{frame}
-    \frametitle{Solution 1}
-    \par Calculate the directional derivative of the continuous function
-    \begin{equation*}
-        f:\R^2\rightarrow R, \qquad f(x,y) = \sqrt[3]{x^2y}
-    \end{equation*}
-    at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
-
-    \nullspacesmall
-
-    \par From the definition, we need to calculate
+    \visible<1->{\par From the definition}
+    \visible<2->{, we need to calculate
     \begin{equation*}
         \frac{d}{dt} \at{f(x_0 + th)}{t = 0}{}
     \end{equation*}
-    where $x_0 = 0$ and $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
-\end{frame}
-
-\begin{frame}[allowframebreaks]
-    \frametitle{Solution 1}
-    \par Calculate the directional derivative of the continuous function
-    \begin{equation*}
-        f:\R^2\rightarrow R, \qquad f(x,y) = \sqrt[3]{x^2y}
-    \end{equation*}
-    at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
-
-    \nullspacesmall
-
-    \par From the definition, we need to calculate
-    \begin{equation*}
-        \frac{d}{dt} \at{f(x_0 + th)}{t = 0}{}
-    \end{equation*}
-    where $x_0 = 0$ and $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$. Hence, we have 
+    where $x_0 = 0$ and $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.} 
+    \visible<3->{Hence, we have 
     \begin{equation*}
         f(x_0 + th) = f(t\cdot \begin{pmatrix}
             1/\sqrt{2}\\
             1\sqrt{2}
         \end{pmatrix}) = \sqrt[3]{\frac{t^2}{2}\cdot \frac{t}{\sqrt{2}}} = \frac{t}{\sqrt{2}}
     \end{equation*}
-    so that 
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Solution 1}
-    \par Calculate the directional derivative of the continuous function
-    \begin{equation*}
-        f:\R^2\rightarrow R, \qquad f(x,y) = \sqrt[3]{x^2y}
-    \end{equation*}
-    at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
-
-    \nullspacesmall
-
-    \par From the definition, we need to calculate
-    \begin{equation*}
-        \frac{d}{dt} \at{f(x_0 + th)}{t = 0}{}
-    \end{equation*}
-    where $x_0 = 0$ and $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$. Hence, we have 
-    \begin{equation*}
-        f(x_0 + th) = f(t\cdot \begin{pmatrix}
-            1/\sqrt{2}\\
-            1\sqrt{2}
-        \end{pmatrix}) = \sqrt[3]{\frac{t^2}{2}\cdot \frac{t}{\sqrt{2}}} = \frac{t}{\sqrt{2}}
-    \end{equation*}
-    so that 
+    so that}
+    \visible<4->{
     \begin{equation*}
         \frac{d}{dt}f(x_0 + th) = \frac{d}{dt}\frac{t}{\sqrt{2}} = \frac{1}{\sqrt{2}}.
     \end{equation*}
     
-    \myqed
+    \myqed}
 
 \end{frame}
 
@@ -191,144 +138,47 @@
     is conservative.
     
     \nullspacesmall
-
-    \par The set $\R^3\backslash\{0\}$ is simply connected
-\end{frame}
-
-\begin{frame}
-    \frametitle{Solution 2}
-    \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let 
-    $\left\lVert x\right\rVert = \sqrt{x^2_1+x^2_2+x^2_3}$ for $x = (x_1, x_2, x_3)\in \R^3$.
-    \par Prove that the vector field 
-    \begin{equation*}
-        F:\R^3\backslash\{0\}\rightarrow \R^3, \qquad F(x) = g(\left\lVert x\right\rVert )x
-    \end{equation*}
-    is conservative.
-    
-    \nullspacesmall
-
-    \par The set $\R^3\backslash\{0\}$ is simply connected, so it suffices to show that $\text{rot} F = 0$. 
-\end{frame}
-
-\begin{frame}
-    \frametitle{Solution 2}
-    \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let 
-    $\left\lVert x\right\rVert = \sqrt{x^2_1+x^2_2+x^2_3}$ for $x = (x_1, x_2, x_3)\in \R^3$.
-    \par Prove that the vector field 
-    \begin{equation*}
-        F:\R^3\backslash\{0\}\rightarrow \R^3, \qquad F(x) = g(\left\lVert x\right\rVert )x
-    \end{equation*}
-    is conservative.
-    
-    \nullspacesmall
-
-    \par The set $\R^3\backslash\{0\}$ is simply connected, so it suffices to show that $\text{rot} F = 0$. Now 
+    \visible<1->{
+    \par The set $\R^3\backslash\{0\}$ is simply connected}
+    \visible<2->{, so it suffices to show that $\text{rot} F = 0$. }\visible<3->{Now 
     \begin{equation*}
         \left\lvert (\text{rot}F)_i\right\rvert = \left\lvert \frac{\partial F_j}{\partial x_k} - \frac{\partial F_k}{\partial x_j}\right\rvert 
     \end{equation*}
-    where $(i,j,k)$ is any one of the permutation of $\{1,2,3\}$. 
-\end{frame}
-
-
-\begin{frame}
-    \frametitle{Solution 2}
-    \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let 
-    $\left\lVert x\right\rVert = \sqrt{x^2_1+x^2_2+x^2_3}$ for $x = (x_1, x_2, x_3)\in \R^3$.
-    \par Prove that the vector field 
-    \begin{equation*}
-        F:\R^3\backslash\{0\}\rightarrow \R^3, \qquad F(x) = g(\left\lVert x\right\rVert )x
-    \end{equation*}
-    is conservative.
-    
-    \nullspacesmall
-
-    \par The set $\R^3\backslash\{0\}$ is simply connected, so it suffices to show that $\text{rot} F = 0$. Now 
-    \begin{equation*}
-        \left\lvert (\text{rot}F)_i\right\rvert = \left\lvert \frac{\partial F_j}{\partial x_k} - \frac{\partial F_k}{\partial x_j}\right\rvert 
-    \end{equation*}
-    where $(i,j,k)$ is any one of the permutation of $\{1,2,3\}$. 
+    where $(i,j,k)$ is any one of the permutation of $\{1,2,3\}$. }
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution 2}
-    We then have 
+    \visible<1->{
+    We then have}
     \begin{equation*}
         \begin{split}
-            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
-            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
+            \visible<1->{
+            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j}
+            \visible<2->{= \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\}
+            \visible<3->{
+                &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
+            }
+            \visible<4->{
+                &= x_j g'(\left\lVert x\right\rVert )\frac{x_k}{\sqrt{x_1^2+x_2^2+x_3^2}} \\\\
+            }
+            \visible<5->{
+                &= x_j x_k \frac{g'(\left\lVert x\right\rVert )}{\left\lVert x\right\rVert }
+            }
+            \visible<6->{
+                = \frac{\partial F_k}{\partial x_j}
+            }
         \end{split}
     \end{equation*}
+    \visible<7->{
+        \nullspacesmall
+
+        \par Hence, the rotation of $F$ vanishes everywhere on $\R^3\backslash\{0\}$.
+            
+        \myqed
+    }
 \end{frame}
 
-\begin{frame}
-    \frametitle{Solution 2}
-    We then have 
-    \begin{equation*}
-        \begin{split}
-            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
-            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
-            &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
-        \end{split}
-    \end{equation*}
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 2}
-    We then have 
-    \begin{equation*}
-        \begin{split}
-            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
-            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
-            &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
-            &= x_j g'(\left\lVert x\right\rVert )\frac{x_k}{\sqrt{x_1^2+x_2^2+x_3^2}} \\\\
-        \end{split}
-    \end{equation*}
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 2}
-    We then have 
-    \begin{equation*}
-        \begin{split}
-            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
-            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
-            &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
-            &= x_j g'(\left\lVert x\right\rVert )\frac{x_k}{\sqrt{x_1^2+x_2^2+x_3^2}} \\\\
-            &= x_j x_k \frac{g'(\left\lVert x\right\rVert )}{\left\lVert x\right\rVert }\\\\
-        \end{split}
-    \end{equation*}
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 2}
-    We then have 
-    \begin{equation*}
-        \begin{split}
-            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
-            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
-            &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
-            &= x_j g'(\left\lVert x\right\rVert )\frac{x_k}{\sqrt{x_1^2+x_2^2+x_3^2}} \\\\
-            &= x_j x_k \frac{g'(\left\lVert x\right\rVert )}{\left\lVert x\right\rVert } = \frac{\partial F_k}{\partial x_j}
-        \end{split}
-    \end{equation*}
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 2}
-    We then have 
-    \begin{equation*}
-        \begin{split}
-            \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j
-            = \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\
-            &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
-            &= x_j g'(\left\lVert x\right\rVert )\frac{x_k}{\sqrt{x_1^2+x_2^2+x_3^2}} \\\\
-            &= x_j x_k \frac{g'(\left\lVert x\right\rVert )}{\left\lVert x\right\rVert } = \frac{\partial F_k}{\partial x_j}
-        \end{split}
-    \end{equation*}
-
-    \nullspacesmall
-
-    \par Hence, the rotation of $F$ vanishes everywhere on $\R^3\backslash\{0\}$.
-
-    \myqed
-
-\end{frame}
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{frame}
@@ -360,7 +210,15 @@
     
     \par We note that 
     \begin{equation*}
-        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+        \visible<1->{
+            \frac{\partial F_i}{\partial x_i}
+        }
+        \visible<2->{
+            = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}}
+        }
+        \visible<3->{
+            = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+        }          
     \end{equation*}
 \end{frame}
 \begin{frame}
@@ -369,101 +227,46 @@
     \begin{equation*}
         \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
     \end{equation*}
-    so 
+    \visible<2->{
+        so 
+    }    
     \begin{equation*}
-        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
+        \visible<2->{
+            \text{div}F(x) =
+        }
+        \visible<3->{
+            \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i}
+        }
+        \visible<4->{
+            =0
+        }         
     \end{equation*}
-    for \dots
+    \visible<5->{for }\visible<6->{$x\neq 0$.}\visible<7->{ Hence, it is sufficient to calculate the flux through the boundary of an}
+    \visible<8->{
+    \textbf{arbitrary ball} $B_\epsilon(0)$ of radius $\epsilon>0$ centered at the origin. We can parametrize $\partial B_\epsilon(0)$ by 
+    }
+    \begin{equation*}
+        \visible<9->{
+            \varphi(\phi, \theta) = \begin{pmatrix}
+                \epsilon \cos \phi \sin \theta\\
+                \epsilon \sin\phi \sin\theta\\
+                \epsilon\cos\theta
+            \end{pmatrix},
+        }
+        \qquad
+        \visible<10->{
+            t_\theta\times t_\phi = \begin{pmatrix}
+                \epsilon^2\cos\phi\sin^2\theta\\
+                \epsilon^2\sin\phi\sin^2\theta\\
+                \epsilon^2\cos\theta\sin\theta
+            \end{pmatrix}
+        }        
+    \end{equation*}
+    \visible<11->{
+        where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector.
+    }
 \end{frame}
-\begin{frame}
-    \frametitle{Solution 3}
-    \par We note that 
-    \begin{equation*}
-        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
-    \end{equation*}
-    so 
-    \begin{equation*}
-        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
-    \end{equation*}
-    for $x\neq 0$.
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 3}
-    \par We note that 
-    \begin{equation*}
-        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
-    \end{equation*}
-    so 
-    \begin{equation*}
-        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
-    \end{equation*}
-    for $x\neq 0$. Hence, it is sufficient to calculate the flux through the boundary of an 
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 3}
-    \par We note that 
-    \begin{equation*}
-        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
-    \end{equation*}
-    so 
-    \begin{equation*}
-        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
-    \end{equation*}
-    for $x\neq 0$. Hence, it is sufficient to calculate the flux through the boundary of an \textbf{arbitrary ball} $B_\epsilon(0)$ of radius $\epsilon>0$
-    centered at the origin. We can parametrize $\partial B_\epsilon(0)$ by 
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 3}
-    \par We note that 
-    \begin{equation*}
-        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
-    \end{equation*}
-    so 
-    \begin{equation*}
-        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
-    \end{equation*}
-    for $x\neq 0$. Hence, it is sufficient to calculate the flux through the boundary of an \textbf{arbitrary ball} $B_\epsilon(0)$ of radius $\epsilon>0$
-    centered at the origin. We can parametrize $\partial B_\epsilon(0)$ by 
-    \begin{equation*}
-        \varphi(\phi, \theta) = \begin{pmatrix}
-            \epsilon \cos \phi \sin \theta\\
-            \epsilon \sin\phi \sin\theta\\
-            \epsilon\cos\theta
-        \end{pmatrix}, \qquad
-        t_\theta\times t_\phi = \begin{pmatrix}
-            \epsilon^2\cos\phi\sin^2\theta\\
-            \epsilon^2\sin\phi\sin^2\theta\\
-            \epsilon^2\cos\theta\sin\theta
-        \end{pmatrix}
-    \end{equation*}
-    where $0<\phi<2\pi$ and $0<\theta<\pi$. 
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 3}
-    \par We note that 
-    \begin{equation*}
-        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
-    \end{equation*}
-    so 
-    \begin{equation*}
-        \text{div}F(x) = \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i} = 0
-    \end{equation*}
-    for $x\neq 0$. Hence, it is sufficient to calculate the flux through the boundary of an \textbf{arbitrary ball} $B_\epsilon(0)$ of radius $\epsilon>0$
-    centered at the origin. We can parametrize $\partial B_\epsilon(0)$ by 
-    \begin{equation*}
-        \varphi(\phi, \theta) = \begin{pmatrix}
-            \epsilon \cos \phi \sin \theta\\
-            \epsilon \sin\phi \sin\theta\\
-            \epsilon\cos\theta
-        \end{pmatrix}, \qquad
-        t_\theta\times t_\phi = \begin{pmatrix}
-            \epsilon^2\cos\phi\sin^2\theta\\
-            \epsilon^2\sin\phi\sin^2\theta\\
-            \epsilon^2\cos\theta\sin\theta
-        \end{pmatrix}
-    \end{equation*}
-    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector.
-\end{frame}
+
 \begin{frame}
     \frametitle{Solution 3}
     \par  We can parametrize $\partial B_\epsilon(0)$ by 
@@ -479,11 +282,15 @@
             \epsilon^2\cos\theta\sin\theta
         \end{pmatrix}
     \end{equation*}
-    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector. Then the flux through $\mathcal{S}$ is 
+    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector.\visible<2->{ Then the flux through $\mathcal{S}$ is } 
     \begin{equation*}
         \begin{split}
-            \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
-            &= \int^{2\pi}_0\int^\pi_0\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+            \visible<3->{
+                \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
+            }
+            \visible<4->{
+                &= \int^{2\pi}_0\int^\pi_0\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+            }                        
         \end{split}
     \end{equation*}
 \end{frame}
@@ -507,107 +314,28 @@
         \begin{split}
             \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
             &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+            \visible<2->{
+                &= \int^{2\pi}_0\int^\pi_0 \frac{\epsilon^3}{\epsilon^3}\left\langle \begin{pmatrix}
+                    \cos \phi \sin \theta\\
+                    \sin\phi \sin\theta\\
+                   \cos\theta
+               \end{pmatrix}, \begin{pmatrix}
+                   \cos\phi\sin^2\theta\\
+                   \sin\phi\sin^2\theta\\
+                   \cos\theta\sin\theta
+               \end{pmatrix}\right\rangle \,d\theta\,d\phi\\
+            }
+            \visible<3->{
+                &= \int^{2\pi}_0\int^\pi_0\sin\theta\,d\theta\,d\phi
+            }
+            \visible<4->{
+                = 4\pi
+            }
         \end{split}
     \end{equation*}
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 3}
-    \par  We can parametrize $\partial B_\epsilon(0)$ by 
-    \begin{equation*}
-        \varphi(\phi, \theta) = \begin{pmatrix}
-            \epsilon \cos \phi \sin \theta\\
-            \epsilon \sin\phi \sin\theta\\
-            \epsilon\cos\theta
-        \end{pmatrix}, \qquad
-        t_\theta\times t_\phi = \begin{pmatrix}
-            \epsilon^2\cos\phi\sin^2\theta\\
-            \epsilon^2\sin\phi\sin^2\theta\\
-            \epsilon^2\cos\theta\sin\theta
-        \end{pmatrix}
-    \end{equation*}
-    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector. Then the flux through $\mathcal{S}$ is 
-    \begin{equation*}
-        \begin{split}
-            \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
-            &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
-            &= \int^{2\pi}_0\int^\pi_0 \frac{\epsilon^3}{\epsilon^3}\left\langle \begin{pmatrix}
-                 \cos \phi \sin \theta\\
-                 \sin\phi \sin\theta\\
-                \cos\theta
-            \end{pmatrix}, \begin{pmatrix}
-                \cos\phi\sin^2\theta\\
-                \sin\phi\sin^2\theta\\
-                \cos\theta\sin\theta
-            \end{pmatrix}\right\rangle \,d\theta\,d\phi\\
-        \end{split}
-    \end{equation*}
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 3}
-    \par  We can parametrize $\partial B_\epsilon(0)$ by 
-    \begin{equation*}
-        \varphi(\phi, \theta) = \begin{pmatrix}
-            \epsilon \cos \phi \sin \theta\\
-            \epsilon \sin\phi \sin\theta\\
-            \epsilon\cos\theta
-        \end{pmatrix}, \qquad
-        t_\theta\times t_\phi = \begin{pmatrix}
-            \epsilon^2\cos\phi\sin^2\theta\\
-            \epsilon^2\sin\phi\sin^2\theta\\
-            \epsilon^2\cos\theta\sin\theta
-        \end{pmatrix}
-    \end{equation*}
-    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector. Then the flux through $\mathcal{S}$ is 
-    \begin{equation*}
-        \begin{split}
-            \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
-            &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
-            &= \int^{2\pi}_0\int^\pi_0 \frac{\epsilon^3}{\epsilon^3}\left\langle \begin{pmatrix}
-                 \cos \phi \sin \theta\\
-                 \sin\phi \sin\theta\\
-                \cos\theta
-            \end{pmatrix}, \begin{pmatrix}
-                \cos\phi\sin^2\theta\\
-                \sin\phi\sin^2\theta\\
-                \cos\theta\sin\theta
-            \end{pmatrix}\right\rangle \,d\theta\,d\phi\\
-            &= \int^{2\pi}_0\int^\pi_0\sin\theta\,d\theta\,d\phi\\
-        \end{split}
-    \end{equation*}
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 3}
-    \par  We can parametrize $\partial B_\epsilon(0)$ by 
-    \begin{equation*}
-        \varphi(\phi, \theta) = \begin{pmatrix}
-            \epsilon \cos \phi \sin \theta\\
-            \epsilon \sin\phi \sin\theta\\
-            \epsilon\cos\theta
-        \end{pmatrix}, \qquad
-        t_\theta\times t_\phi = \begin{pmatrix}
-            \epsilon^2\cos\phi\sin^2\theta\\
-            \epsilon^2\sin\phi\sin^2\theta\\
-            \epsilon^2\cos\theta\sin\theta
-        \end{pmatrix}
-    \end{equation*}
-    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector. Then the flux through $\mathcal{S}$ is 
-    \begin{equation*}
-        \begin{split}
-            \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle 
-            &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
-            &= \int^{2\pi}_0\int^\pi_0 \frac{\epsilon^3}{\epsilon^3}\left\langle \begin{pmatrix}
-                 \cos \phi \sin \theta\\
-                 \sin\phi \sin\theta\\
-                \cos\theta
-            \end{pmatrix}, \begin{pmatrix}
-                \cos\phi\sin^2\theta\\
-                \sin\phi\sin^2\theta\\
-                \cos\theta\sin\theta
-            \end{pmatrix}\right\rangle \,d\theta\,d\phi\\
-            &= \int^{2\pi}_0\int^\pi_0\sin\theta\,d\theta\,d\phi = 4\pi
-        \end{split}
-    \end{equation*}
-    \myqed
+    \visible<4->{
+        \myqed
+    }
 \end{frame}
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -632,186 +360,49 @@
 
     \nullspacesmall
 
-    \par We multiply both side of the equation with $u$
+    \visible<1->{
+        \par We multiply both side of the equation with $u$
+    }
+    \visible<2->{
+        and integrate over $\Omega$ to obtain 
+    }
     \begin{equation*}
-        u\Delta u = \lambda u^2
+        \visible<2->{\int_\Omega} \visible<1->{u\Delta u}\visible<2->{\,dx} = \visible<2->{\int_\Omega} \visible<1->{\lambda u^2}\visible<2->{\,dx}.
     \end{equation*}
+    \visible<3->{
+        \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide}\visible<4->{, yielding
+        \begin{equation*}
+            \lambda = \frac{\int_\Omega u\Delta u\,dx}{\int_\Omega u^2\,dx}.
+        \end{equation*}
+    }
+
 \end{frame}
+
 \begin{frame}
     \frametitle{Solution 4}
-    \par Let $\Omega\subset \R^n$ be an open set and $R\subset \Omega$ an admissible region. Let $u:\Omega\rightarrow\R$ be a twice continuously differentiable 
-    function such that 
-    \begin{equation*}
-        \frac{\partial^2 u}{\partial x^2_1} + \cdots + \frac{\partial^2 u}{\partial x^2_n} = \lambda u\text{ on int}R\qquad \text{and}\qquad \at{u}{\partial R}{} = 0
-    \end{equation*}
-    for some $\lambda\in\R$. Suppose that $u\neq 0$, i.e., $u(x)\neq 0$ for some $x\in R$. Prove that $\lambda<0$.
-
-    \nullspacesmall
-
-    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
-    \begin{equation*}
-        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
-    \end{equation*}
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par Let $\Omega\subset \R^n$ be an open set and $R\subset \Omega$ an admissible region. Let $u:\Omega\rightarrow\R$ be a twice continuously differentiable 
-    function such that 
-    \begin{equation*}
-        \frac{\partial^2 u}{\partial x^2_1} + \cdots + \frac{\partial^2 u}{\partial x^2_n} = \lambda u\text{ on int}R\qquad \text{and}\qquad \at{u}{\partial R}{} = 0
-    \end{equation*}
-    for some $\lambda\in\R$. Suppose that $u\neq 0$, i.e., $u(x)\neq 0$ for some $x\in R$. Prove that $\lambda<0$.
-
-    \nullspacesmall
-
-    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
-    \begin{equation*}
-        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
-    \end{equation*}
-    \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
-    \begin{equation*}
-        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
-    \end{equation*}
+    \visible<1->{
+        \par Applying Green's first identity}\visible<2->{ and using the fact that $\at{u}{\partial \Omega}{} = 0$}\visible<3->{, we obtain
+        \begin{equation*}
+            \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
+        \end{equation*}
+    }
+    \visible<4->{
+        \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$.
+    }
+    \visible<5->{
+        Furthermore, $\lambda = 0$ only if 
+    }
+    \visible<6->{
+        \begin{equation*}
+            \int_\Omega(\nabla u)^2\,dx = 0
+        \end{equation*}
+        which implies $\nabla u(x) = 0$ for all $x$, i.e.}\visible<7->{, u is constant.}\visible<8->{ Since $\at{u}{\partial \Omega}{} = 0$}\visible<9->{, this would mean $u(x) = 0$ for all $x$, which we have excluded.}\visible<10->{ Therefore, $\lambda = 0$ is impossible and we conclude that
+        \begin{equation*}
+            \lambda < 0.
+        \end{equation*}
         
-    \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide, yielding
-    \begin{equation*}
-        \lambda = \frac{\int_\Omega u\Delta u\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
+        \myqed
+    }
 \end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
-    \begin{equation*}
-        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
-    \end{equation*}
-        
-    \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide, yielding
-    \begin{equation*}
-        \lambda = \frac{\int_\Omega u\Delta u\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
 
-    \par Applying Green's first identity
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
-    \begin{equation*}
-        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
-    \end{equation*}
-        
-    \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide, yielding
-    \begin{equation*}
-        \lambda = \frac{\int_\Omega u\Delta u\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
-
-    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
-    \begin{equation*}
-        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par We multiply both side of the equation with $u$ and integrate over $\Omega$ to obtain 
-    \begin{equation*}
-        \int_\Omega u\Delta u\,dx = \lambda\int_\Omega u^2\,dx.
-    \end{equation*}
-        
-    \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide, yielding
-    \begin{equation*}
-        \lambda = \frac{\int_\Omega u\Delta u\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
-
-    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
-    \begin{equation*}
-        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
-
-    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$.
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
-    \begin{equation*}
-        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
-
-    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
-    \begin{equation*}
-        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
-
-    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
-    \begin{equation*}
-        \int_\Omega(\nabla u)^2\,dx = 0
-    \end{equation*}
-    which implies $\nabla u(x) = 0$ for all $x$, i.e.
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
-    \begin{equation*}
-        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
-
-    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
-    \begin{equation*}
-        \int_\Omega(\nabla u)^2\,dx = 0
-    \end{equation*}
-    which implies $\nabla u(x) = 0$ for all $x$, i.e., u is constant.
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
-    \begin{equation*}
-        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
-
-    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
-    \begin{equation*}
-        \int_\Omega(\nabla u)^2\,dx = 0
-    \end{equation*}
-    which implies $\nabla u(x) = 0$ for all $x$, i.e., u is constant. Since $\at{u}{\partial \Omega}{} = 0$
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
-    \begin{equation*}
-        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
-
-    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
-    \begin{equation*}
-        \int_\Omega(\nabla u)^2\,dx = 0
-    \end{equation*}
-    which implies $\nabla u(x) = 0$ for all $x$, i.e., u is constant. Since $\at{u}{\partial \Omega}{} = 0$, this would mean $u(x) = 0$ for all $x$, which we
-    have excluded.
-\end{frame}
-\begin{frame}
-    \frametitle{Solution 4}
-    \par Applying Green's first identity and using the fact that $\at{u}{\partial \Omega}{} = 0$, we obtain
-    \begin{equation*}
-        \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
-    \end{equation*}
-
-    \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$. Furthermore, $\lambda = 0$ only if 
-    \begin{equation*}
-        \int_\Omega(\nabla u)^2\,dx = 0
-    \end{equation*}
-    which implies $\nabla u(x) = 0$ for all $x$, i.e., u is constant. Since $\at{u}{\partial \Omega}{} = 0$, this would mean $u(x) = 0$ for all $x$, which we
-    have excluded. Therefore, $\lambda = 0$ is impossible and we conclude that
-    \begin{equation*}
-        \lambda < 0.
-    \end{equation*}
-    
-    \myqed
-
-\end{frame}
 \end{document}
