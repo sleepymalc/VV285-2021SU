@@ -1,4 +1,4 @@
-# Vv285 2021SU TA
+# Vv285 2021SU
 
 ## About Honor Code
 
@@ -17,4 +17,3 @@ The work are partially contributed to some other students, TAs and professors in
 The first ever **1st JIntegration Bee** is held by me and other TAs in 2021SU Vv285. We create a separate repo for it, please go to [here](https://github.com/sleepymalc/UM-JI-IntegrationBee) if you are interested.
 
 If you find any problems in the reposity, welcome to make an issue or pull request.
-
