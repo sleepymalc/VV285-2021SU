@@ -1,0 +1,387 @@
+\documentclass[10pt, t, allowdisplaybreaks]{beamer}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{float} 
+\usepackage{multido}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{indentfirst} 
+\usepackage[style=mla]{biblatex}
+\usepackage{setspace}
+\usepackage{calligra}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{textpos}
+
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+\definecolor{Turquoise3}{RGB}{0, 134, 139}
+\renewcommand{\emph}[1]{{\color{Turquoise3}\textsl{#1}}}
+\newcommand{\C}{\mathbb{C}} \newcommand{\F}{\mathbb{F}} \newcommand{\R}{\mathbb{R}} \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\myseries}[2]{$#1_1,#1_2,\dots,#1_#2$}
+\newcommand{\nullspace}{~\\[15pt]}
+\newcommand{\rot}{\text{\Large{\calligra{rot}}\,}}
+\newcommand{\Remark}{\textbf{Remark: }}
+\newcommand{\Question}{\textbf{Question: }}
+\newcommand{\Extension}{\textbf{Extension: }}
+\newcommand{\scp}[2]{\langle\,#1\,,\,#2\,\rangle} \newcommand{\scpp}{\langle\,\cdot\,,\,\cdot\,\rangle}
+\newcommand{\myqed}{\hfill$\blacksquare$}
+\newcommand{\nullspacesmall}{~\vspace{1em}}
+\newcommand{\nullspacemid}{~\vspace{4em}}
+\newcommand{\nullspacebig}{~\vspace{6em}}
+\newcommand{\at}[3]{\left.#1\right\vert_{#2}^{#3}}
+
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+
+\addtobeamertemplate{frametitle}{}{
+\begin{textblock*}{100mm}(0.85\textwidth,-1cm)
+\includegraphics[height=1cm]{Figures/logo/logo.png}
+\end{textblock*}}
+
+\definecolor{themecolor}{RGB}{25,25,112} 
+
+\usecolortheme[named=themecolor]{structure}
+
+\setbeamertemplate{items}[default]
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=themecolor,
+    filecolor=themecolor,      
+    urlcolor=themecolor,
+    citecolor=themecolor,
+}
+
+\title{VV285 RC Final}
+\subtitle{\textbf{Final Exam Exercises}\\\large Last but not least\dots}
+\institute[UM-SJTU JI]{University of Michigan-Shanghai Jiao Tong University Joint Institute}
+\author{Pingbang Hu}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \begin{center}
+        \includegraphics[height=2cm]{Figures/logo/logo2.png}
+    \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}
+    \frametitle{Exercise 1}
+    \par Calculate the directional derivative of the continuous function
+    \begin{equation*}
+        f:\R^2\rightarrow R, \qquad f(x,y) = \sqrt[3]{x^2y}
+    \end{equation*}
+    at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 1}
+    \par Calculate the directional derivative of the continuous function
+    \begin{equation*}
+        f:\R^2\rightarrow R, \qquad f(x,y) = \sqrt[3]{x^2y}
+    \end{equation*}
+    at $(x,y) = (0,0)$ in the direction of the vector $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.
+
+    \nullspacesmall
+
+    \visible<1->{\par From the definition}
+    \visible<2->{, we need to calculate
+        \begin{equation*}
+            \frac{d}{dt} \at{f(x_0 + th)}{t = 0}{}
+        \end{equation*}
+        where $x_0 = 0$ and $h = (\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$.}
+    \visible<3->{Hence, we have
+        \begin{equation*}
+            f(x_0 + th) = f(t\cdot \begin{pmatrix}
+                1/\sqrt{2} \\
+                1\sqrt{2}
+            \end{pmatrix}) = \sqrt[3]{\frac{t^2}{2}\cdot \frac{t}{\sqrt{2}}} = \frac{t}{\sqrt{2}}
+        \end{equation*}
+        so that}
+    \visible<4->{
+        \begin{equation*}
+            \frac{d}{dt}f(x_0 + th) = \frac{d}{dt}\frac{t}{\sqrt{2}} = \frac{1}{\sqrt{2}}.
+        \end{equation*}
+
+        \myqed}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}
+    \frametitle{Exercise 2}
+    \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let
+    $\left\lVert x\right\rVert = \sqrt{x^2_1+x^2_2+x^2_3}$ for $x = (x_1, x_2, x_3)\in \R^3$.
+    \par Prove that the vector field
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow \R^3, \qquad F(x) = g(\left\lVert x\right\rVert )x
+    \end{equation*}
+    is conservative.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 2}
+    \par Let $g:(0, \infty)\rightarrow \R$ be a differentiable function and let
+    $\left\lVert x\right\rVert = \sqrt{x^2_1+x^2_2+x^2_3}$ for $x = (x_1, x_2, x_3)\in \R^3$.
+    \par Prove that the vector field
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow \R^3, \qquad F(x) = g(\left\lVert x\right\rVert )x
+    \end{equation*}
+    is conservative.
+
+    \nullspacesmall
+    \visible<1->{
+        \par The set $\R^3\backslash\{0\}$ is simply connected}
+    \visible<2->{, so it suffices to show that $\text{rot} F = 0$. }\visible<3->{Now
+        \begin{equation*}
+            \left\lvert (\text{rot}F)_i\right\rvert = \left\lvert \frac{\partial F_j}{\partial x_k} - \frac{\partial F_k}{\partial x_j}\right\rvert
+        \end{equation*}
+        where $(i,j,k)$ is any one of the permutation of $\{1,2,3\}$. }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 2}
+    \visible<1->{
+        We then have}
+    \begin{equation*}
+        \begin{split}
+            \visible<1->{
+                \frac{\partial F_j}{\partial x_k} &= \frac{\partial}{\partial x_k}\left(g(\left\lVert x\right\rVert )x\right)_j}
+            \visible<2->{= \frac{\partial}{\partial x_k}g(\left\lVert x\right\rVert )x_j\\\\}
+            \visible<3->{
+                &= x_j g'(\left\lVert x\right\rVert )\frac{\partial }{\partial x_k}\sqrt{x_1^2+x_2^2+x_3^2} \\\\
+            }
+            \visible<4->{
+                &= x_j g'(\left\lVert x\right\rVert )\frac{x_k}{\sqrt{x_1^2+x_2^2+x_3^2}} \\\\
+            }
+            \visible<5->{
+                &= x_j x_k \frac{g'(\left\lVert x\right\rVert )}{\left\lVert x\right\rVert }
+            }
+            \visible<6->{
+                = \frac{\partial F_k}{\partial x_j}
+            }
+        \end{split}
+    \end{equation*}
+    \visible<7->{
+        \nullspacesmall
+
+        \par Hence, the rotation of $F$ vanishes everywhere on $\R^3\backslash\{0\}$.
+
+        \myqed
+    }
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}
+    \frametitle{Exercise 3}
+    \par Let $\left\lVert x\right\rVert = \sqrt{x_1^2+x_2^2+x_3^2}$ for $x = (x_1, x_2, x_3) \in \R^3$. Find the flux of the vector field
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow\R^3, \qquad F(x) = \frac{x}{\left\lVert x\right\rVert^3 }
+    \end{equation*}
+    through the surface
+    \begin{equation*}
+        \mathcal{S} = \{x\in \R^3: 4x_1^2 + 9x_2^2 + 6x_3^2 = 36\}
+    \end{equation*}
+    by using a suitable parametrization.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 3}
+    \par Let $\left\lVert x\right\rVert = \sqrt{x_1^2+x_2^2+x_3^2}$ for $x = (x_1, x_2, x_3) \in \R^3$. Find the flux of the vector field
+    \begin{equation*}
+        F:\R^3\backslash\{0\}\rightarrow\R^3, \qquad F(x) = \frac{x}{\left\lVert x\right\rVert^3 }
+    \end{equation*}
+    through the surface
+    \begin{equation*}
+        \mathcal{S} = \{x\in \R^3: 4x_1^2 + 9x_2^2 + 6x_3^2 = 36\}
+    \end{equation*}
+    by using a suitable parametrization.
+
+    \nullspacesmall
+
+    \par We note that
+    \begin{equation*}
+        \visible<1->{
+            \frac{\partial F_i}{\partial x_i}
+        }
+        \visible<2->{
+            = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}}
+        }
+        \visible<3->{
+            = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+        }
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 3}
+    \par We note that
+    \begin{equation*}
+        \frac{\partial F_i}{\partial x_i} = \frac{\partial }{\partial x_i}\frac{x_i}{(x_1^2+x_2^2+x_3^2)^{3/2}} = \frac{(x_1^2+x_2^2+x_3^2)^{3/2} - 3x_i^2(x_1^2+x_2^2+x_3^2)^{1/2}}{(x_1^2+x_2^2+x_3^2)^{3}}
+    \end{equation*}
+    \visible<2->{
+        so
+    }
+    \begin{equation*}
+        \visible<2->{
+            \text{div}F(x) =
+        }
+        \visible<3->{
+        \sum^3_{i = 1}\frac{\partial F_i}{\partial x_i}
+        }
+        \visible<4->{
+            =0
+        }
+    \end{equation*}
+    \visible<5->{for }\visible<6->{$x\neq 0$.}\visible<7->{ Hence, it is sufficient to calculate the flux through the boundary of an}
+    \visible<8->{
+        \textbf{arbitrary ball} $B_\epsilon(0)$ of radius $\epsilon>0$ centered at the origin. We can parametrize $\partial B_\epsilon(0)$ by
+    }
+    \begin{equation*}
+        \visible<9->{
+            \varphi(\phi, \theta) = \begin{pmatrix}
+                \epsilon \cos \phi \sin \theta \\
+                \epsilon \sin\phi \sin\theta   \\
+                \epsilon\cos\theta
+            \end{pmatrix},
+        }
+        \qquad
+        \visible<10->{
+            t_\theta\times t_\phi = \begin{pmatrix}
+                \epsilon^2\cos\phi\sin^2\theta \\
+                \epsilon^2\sin\phi\sin^2\theta \\
+                \epsilon^2\cos\theta\sin\theta
+            \end{pmatrix}
+        }
+    \end{equation*}
+    \visible<11->{
+        where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector.
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 3}
+    \par  We can parametrize $\partial B_\epsilon(0)$ by
+    \begin{equation*}
+        \varphi(\phi, \theta) = \begin{pmatrix}
+            \epsilon \cos \phi \sin \theta \\
+            \epsilon \sin\phi \sin\theta   \\
+            \epsilon\cos\theta
+        \end{pmatrix}, \qquad
+        t_\theta\times t_\phi = \begin{pmatrix}
+            \epsilon^2\cos\phi\sin^2\theta \\
+            \epsilon^2\sin\phi\sin^2\theta \\
+            \epsilon^2\cos\theta\sin\theta
+        \end{pmatrix}
+    \end{equation*}
+    where $0<\phi<2\pi$ and $0<\theta<\pi$. We have chosen the outward-pointing (positively oriented) normal vector.\visible<2->{ Then the flux through $\mathcal{S}$ is }
+    \begin{equation*}
+        \begin{split}
+            \visible<3->{
+                \int_{\partial B_\epsilon(0)}\left\langle F, d\overrightarrow{A} \right\rangle
+            }
+            \only<4-4>{
+                &= \int^{2\pi}_0\int^\pi_0\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+            }
+            \visible<5->{
+                &= \int^{2\pi}_0\int^\pi_0\underbrace{\frac{1}{\left\lVert \varphi(\phi,\theta)^3\right\rVert }}_{=1/\epsilon^3}\left\langle \varphi(\phi, \theta), t_\phi\times t_\theta(\phi, \theta)\right\rangle \,d\theta\,d\phi\\
+            }
+            \visible<6->{
+                &= \int^{2\pi}_0\int^\pi_0 \frac{\epsilon^3}{\epsilon^3}\left\langle \begin{pmatrix}
+                    \cos \phi \sin \theta \\
+                    \sin\phi \sin\theta   \\
+                    \cos\theta
+                \end{pmatrix}, \begin{pmatrix}
+                    \cos\phi\sin^2\theta \\
+                    \sin\phi\sin^2\theta \\
+                    \cos\theta\sin\theta
+                \end{pmatrix}\right\rangle \,d\theta\,d\phi\\
+            }
+            \visible<7->{
+                &= \int^{2\pi}_0\int^\pi_0\sin\theta\,d\theta\,d\phi
+            }
+            \visible<8->{
+                = 4\pi
+            }
+        \end{split}
+    \end{equation*}
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{frame}
+    \frametitle{Exercise 4}
+    \par Let $\Omega\subset \R^n$ be an open set and $R\subset \Omega$ an admissible region. Let $u:\Omega\rightarrow\R$ be a twice continuously differentiable
+    function such that
+    \begin{equation*}
+        \frac{\partial^2 u}{\partial x^2_1} + \cdots + \frac{\partial^2 u}{\partial x^2_n} = \lambda u\text{ on int}R\qquad \text{and}\qquad \at{u}{\partial R}{} = 0
+    \end{equation*}
+    for some $\lambda\in\R$. Suppose that $u\neq 0$, i.e., $u(x)\neq 0$ for some $x\in R$. Prove that $\lambda<0$.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 4}
+    \par Let $\Omega\subset \R^n$ be an open set and $R\subset \Omega$ an admissible region. Let $u:\Omega\rightarrow\R$ be a twice continuously differentiable
+    function such that
+    \begin{equation*}
+        \frac{\partial^2 u}{\partial x^2_1} + \cdots + \frac{\partial^2 u}{\partial x^2_n} = \lambda u\text{ on int}R\qquad \text{and}\qquad \at{u}{\partial R}{} = 0
+    \end{equation*}
+    for some $\lambda\in\R$. Suppose that $u\neq 0$, i.e., $u(x)\neq 0$ for some $x\in R$. Prove that $\lambda<0$.
+
+    \nullspacesmall
+
+    \visible<1->{
+        \par We multiply both side of the equation with $u$
+    }
+    \visible<2->{
+        and integrate over $\Omega$ to obtain
+    }
+    \begin{equation*}
+        \visible<2->{\int_\Omega} \visible<1->{u\Delta u}\visible<2->{\,dx} = \visible<2->{\int_\Omega} \visible<1->{\lambda u^2}\visible<2->{\,dx}.
+    \end{equation*}
+    \visible<3->{
+        \par Since $u$ is not identically zero and $u$ is continuous, the integral on the right is non-zero and we can divide}\visible<4->{, yielding
+        \begin{equation*}
+            \lambda = \frac{\int_\Omega u\Delta u\,dx}{\int_\Omega u^2\,dx}.
+        \end{equation*}
+    }
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution 4}
+    \visible<1->{
+        \par Applying Green's first identity}\visible<2->{ and using the fact that $\at{u}{\partial \Omega}{} = 0$}\visible<3->{, we obtain
+        \begin{equation*}
+            \lambda = \frac{-\int_\Omega (\nabla u)^2\,dx}{\int_\Omega u^2\,dx}.
+        \end{equation*}
+    }
+    \visible<4->{
+        \par Since both integrands on the right are greater or equal to zero, we see that $\lambda\leq 0$.
+    }
+    \visible<5->{
+        Furthermore, $\lambda = 0$ only if
+    }
+    \visible<6->{
+        \begin{equation*}
+            \int_\Omega(\nabla u)^2\,dx = 0
+        \end{equation*}
+        which implies $\nabla u(x) = 0$ for all $x$, i.e.}\visible<7->{, u is constant.}\visible<8->{ Since
+        $\at{u}{\partial \Omega}{} = 0$}\visible<9->{, this would mean $u(x) = 0$ for all $x$, which we have excluded.}\visible<10->{ Therefore, $\lambda = 0$ is impossible and we conclude that
+        \begin{equation*}
+            \lambda < 0.
+        \end{equation*}
+
+        \myqed
+    }
+\end{frame}
+
+\end{document}
