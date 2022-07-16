@@ -1,4 +1,4 @@
-# Vv285 2021SU
+# VV285 2021SU
 
 ## About Honor Code
 
