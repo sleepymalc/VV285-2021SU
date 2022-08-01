@@ -1,7 +1,7 @@
 # VV285 2021SU
 
 <p align="center"><b><i>
-	Recitation Class of VV285 Lectures Slides📚.
+	Lectures Slides of VV285 (Multi-variables Calculus III) Recitation Class 📚.
 </i></b></p>
 
 ## About Honor Code
