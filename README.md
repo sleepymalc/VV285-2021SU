@@ -14,4 +14,4 @@ The owner of this repository doesn't take any commission for others' faults. Acc
 
 The works are partially contributed by some other students, TAs, and professors in JI, which would be listed if known.
 
-If you find any problems in the repository, welcome to make an issue or pull request.
+> If you find any problems in the repository, welcome to make an issue or pull request.
